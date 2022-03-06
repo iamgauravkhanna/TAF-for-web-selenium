@@ -1,3 +1,3 @@
-# TAF-for-web
+# TAF-for-web-selenium
 
-TAF (Test Automation Framework) for Web
+TAF (Test Automation Framework) for Web using Selenium
