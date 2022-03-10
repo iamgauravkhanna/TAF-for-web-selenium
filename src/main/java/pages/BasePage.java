@@ -1,15 +1,13 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static constants.FrameworkConstants.*;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
@@ -31,11 +29,40 @@ public class BasePage {
         }
     }
 
+    public void waitForOverlaysToDisappear(By overlay) {
+        List<WebElement> overlays = webDriver.findElements(overlay);
+        System.out.println("OVERLAY SIZE" + overlays.size());
+        if (overlays.size() > 0) {
+            webDriverWait.until(ExpectedConditions.invisibilityOfAllElements(overlays));
+            System.out.println("OVERLAYS INVISIBLE");
+        } else {
+            System.out.println("OVERLAY NOT FOUND");
+        }
+    }
+
     public WebElement waitForElementToBeClickable(By by) {
         return webDriverWait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
+    public WebElement waitForElementVisibility(WebElement element) {
+        return webDriverWait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     public void click(By by) {
         waitForElementToBeClickable(by).click();
+    }
+
+    public String getElementText(WebElement element) {
+        return waitForElementVisibility(element).getText();
+    }
+
+    public void clearAndSendKeys(WebElement element, String value) {
+        element = waitForElementVisibility(element);
+        element.clear();
+        element.sendKeys(value);
+    }
+
+    public void scrollToElement(WebElement element) {
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 }
