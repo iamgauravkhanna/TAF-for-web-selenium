@@ -11,4 +11,6 @@ public class FrameworkConstants {
     public static final String BROWSER_SAFARI = "safari";
     public static final String BROWSER_EDGE = "edge";
     public static final String BROWSER_OPERA = "opera";
+
+    public static final String DIRECTORY_ENV_CONFIG = "/src/main/resources/";
 }
