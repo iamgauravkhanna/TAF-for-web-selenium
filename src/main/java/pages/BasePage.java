@@ -65,4 +65,13 @@ public class BasePage {
     public void scrollToElement(WebElement element) {
         ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
+    public String getElementElementAttribute_Value(WebElement element) {
+        return waitForElementVisibility(element).getAttribute(ATTRIBUTE_VALUE);
+    }
+
+    public String getElementElementCustomAttribute(WebElement element, String customAttribute) {
+        return waitForElementVisibility(element).getAttribute(customAttribute);
+    }
+
 }

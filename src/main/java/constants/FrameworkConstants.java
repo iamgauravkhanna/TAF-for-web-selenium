@@ -13,4 +13,6 @@ public class FrameworkConstants {
     public static final String BROWSER_OPERA = "opera";
 
     public static final String DIRECTORY_ENV_CONFIG = "/src/main/resources/";
+
+    public static final String ATTRIBUTE_VALUE = "value";
 }

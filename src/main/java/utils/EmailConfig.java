@@ -1,4 +1,4 @@
-package utils.email;
+package utils;
 
 public class EmailConfig {
 
