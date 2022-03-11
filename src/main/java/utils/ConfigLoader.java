@@ -1,5 +1,7 @@
 package utils;
 
+import property.PropertyUtil;
+
 import java.io.File;
 import java.util.Properties;
 
@@ -17,7 +19,7 @@ public class ConfigLoader {
     private ConfigLoader() {
 
         String testEnvironment = System.getProperty("testEnvironment") ;
-        testEnvironment = "project01";
+
         String resourcePath = System.getProperty("user.dir") + DIRECTORY_ENV_CONFIG + testEnvironment + File.separator;
 
         File directoryPath = new File(resourcePath);

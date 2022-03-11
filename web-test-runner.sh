@@ -1,8 +1,7 @@
 mvn clean install test \
 -DgroupToRun=tc003 \
--DEnvironmentFilePath=ngage.properties \
--DSuiteFilePath=src/test/resources/suites/master.xml \
 -Dbrowser=firefox \
--DexecutionEnvironment=local \
 -DtestEnvironment=project01 \
+-DSuiteFilePath=src/test/resources/suites/master.xml \
+-DexecutionEnvironment=local \
 -DskipEmail=true

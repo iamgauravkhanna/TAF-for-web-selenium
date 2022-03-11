@@ -1,4 +1,4 @@
-package utils;
+package email;
 
 public class EmailConfig {
 
@@ -10,5 +10,5 @@ public class EmailConfig {
 
     /* "**********@gmail.com", */
     public static final String[] TO = { "****@gmail.com" };
-    public static final String SUBJECT = "Test Automation Framework";
+    public static final String SUBJECT = "Test Automation Report";
 }
