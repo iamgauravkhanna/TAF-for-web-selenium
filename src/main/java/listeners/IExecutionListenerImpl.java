@@ -1,5 +1,7 @@
 package listeners;
 
+import constants.FrameworkConstants;
+import logger.CustomLog;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.IExecutionListener;
 import reporting.ExtentManager;
@@ -22,14 +24,14 @@ public class IExecutionListenerImpl implements IExecutionListener {
 
         ExtentManager.getInstance();
 
-        String log4jPath = System.getProperty("user.dir") + File.separator + "/" + "log4j.properties";
-        PropertyConfigurator.configure(log4jPath);
-
+        System.out.println("Log4j Path : " + FrameworkConstants.log4jPath);
+        PropertyConfigurator.configure(FrameworkConstants.log4jPath);
+        CustomLog.INFO("Executed Started");
     }
 
     @Override
     public void onExecutionFinish() {
-        System.out.println("TestNG has finished, took around");
+        CustomLog.INFO("TestNG has finished, took around");
         ExtentManager.getInstance().flush();
     }
 }

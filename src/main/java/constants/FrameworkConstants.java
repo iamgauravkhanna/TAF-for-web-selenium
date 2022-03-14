@@ -1,5 +1,7 @@
 package constants;
 
+import java.io.File;
+
 public class FrameworkConstants {
 
     public static final int EXPLICIT_WAIT = 10;
@@ -15,4 +17,6 @@ public class FrameworkConstants {
     public static final String DIRECTORY_ENV_CONFIG = "/src/main/resources/";
 
     public static final String ATTRIBUTE_VALUE = "value";
+
+    public static final String log4jPath = System.getProperty("user.dir") + File.separator + "log4j.properties";
 }

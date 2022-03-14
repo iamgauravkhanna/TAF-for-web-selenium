@@ -1,14 +1,15 @@
 package logger;
 
+import constants.FrameworkConstants;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import reporting.ExtentTestManager;
 
 public class CustomLog {
 
-    // Initialize Log4j logs
     private static Logger Log = Logger.getLogger("CustomLog");
 
-    public static void info(String message) {
+    public static void infoExtentStep(String message) {
         INFO(message);
         ExtentTestManager.getTest().info(message);
     }

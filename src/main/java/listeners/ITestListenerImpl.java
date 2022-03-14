@@ -1,5 +1,6 @@
 package listeners;
 
+import logger.CustomLog;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -10,23 +11,23 @@ public class ITestListenerImpl implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
 
-        System.out.println(("*** Running Test Method " + result.getMethod().getMethodName() + "..."));
+        CustomLog.INFO(("Running Test Method " + result.getMethod().getMethodName() + "..."));
         ExtentTestManager.startTest(result.getMethod().getMethodName(),result.getMethod().getDescription());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        ITestListener.super.onTestSuccess(result);
+        ExtentTestManager.getTest().pass("Test Case Pass");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        ITestListener.super.onTestFailure(result);
+        ExtentTestManager.getTest().fail("Test Case Failed");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        ITestListener.super.onTestSkipped(result);
+        ExtentTestManager.getTest().skip("Test Case Skipped");
     }
 
     @Override
