@@ -23,6 +23,7 @@ public class ConfigLoader {
         String resourcePath = System.getProperty("user.dir") + DIRECTORY_ENV_CONFIG + testEnvironment + File.separator;
 
         File directoryPath = new File(resourcePath);
+
         File[] filesList = directoryPath.listFiles();
 
         for(File file : filesList) {

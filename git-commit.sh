@@ -1,3 +1,9 @@
+cd reports
+
+rm -rf *.html
+
+cd ..
+
 mvn clean
 
 ls -ltr

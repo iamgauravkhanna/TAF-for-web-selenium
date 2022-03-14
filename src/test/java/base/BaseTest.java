@@ -3,6 +3,9 @@ package base;
 import factory.DriverFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import reporting.ExtentTestManager;
+
+import java.lang.reflect.Method;
 
 public class BaseTest {
 
@@ -11,6 +14,7 @@ public class BaseTest {
 
         System.out.println("BEFORE TEST CASE : " + getClass().getSimpleName() + " WITH THREAD ID : " + Thread.currentThread().getId());
         DriverFactory.setDriver("firefox");
+        ExtentTestManager.startTest(Method.class.getName(),"description will be here");
     }
 
     @AfterMethod
