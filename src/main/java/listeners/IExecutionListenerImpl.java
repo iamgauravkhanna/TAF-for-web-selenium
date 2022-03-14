@@ -24,7 +24,6 @@ public class IExecutionListenerImpl implements IExecutionListener {
 
         ExtentManager.getInstance();
 
-        System.out.println("Log4j Path : " + FrameworkConstants.log4jPath);
         PropertyConfigurator.configure(FrameworkConstants.log4jPath);
         CustomLog.INFO("Executed Started");
     }

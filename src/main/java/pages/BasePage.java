@@ -1,5 +1,6 @@
 package pages;
 
+import logger.CustomLog;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,7 +26,7 @@ public class BasePage {
             webDriver.get(link);
             webDriver.manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
         } catch (TimeoutException e) {
-            System.out.println("Page did not loaded within " + TIMEOUT + " seconds!");
+            CustomLog.ERROR("Page did not loaded within " + TIMEOUT + " seconds!");
         }
     }
 

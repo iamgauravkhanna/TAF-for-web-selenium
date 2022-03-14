@@ -25,7 +25,6 @@ public class JavaUtil {
         try {
             dir.mkdir();
             successful = true;
-            System.out.println("Directory Created");
         } catch (Exception e) {
             e.printStackTrace();
         }

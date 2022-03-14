@@ -2,6 +2,7 @@ package reporting;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import logger.CustomLog;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +23,7 @@ public class ExtentTestManager {
 
     public static synchronized ExtentTest startTest(String testName, String description) {
 
-        System.out.println(testName+" : "+description);
+        CustomLog.INFO(testName + " : " + description);
         ExtentTest extentTest = extent.createTest(testName, description);
         extentTestMap.put((int) (long) (Thread.currentThread().getId()), extentTest);
         return extentTest;

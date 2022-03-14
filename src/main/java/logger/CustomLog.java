@@ -19,4 +19,9 @@ public class CustomLog {
         System.out.println(" *** INFO : " + message);
     }
 
+    public static void ERROR(String message) {
+        Log.error(message);
+        System.out.println(" *** ERROR : " + message);
+    }
+
 }
