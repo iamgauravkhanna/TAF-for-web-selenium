@@ -1,8 +1,8 @@
 package listeners;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.testng.IExecutionListener;
 import reporting.ExtentManager;
-import reporting.ExtentTestManager;
 import utils.JavaUtil;
 
 import java.io.File;
@@ -21,6 +21,10 @@ public class IExecutionListenerImpl implements IExecutionListener {
         System.setProperty("logsDirectory", outputDirectory);
 
         ExtentManager.getInstance();
+
+        String log4jPath = System.getProperty("user.dir") + File.separator + "/" + "log4j.properties";
+        PropertyConfigurator.configure(log4jPath);
+
     }
 
     @Override
