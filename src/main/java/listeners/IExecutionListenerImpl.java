@@ -11,13 +11,13 @@ public class IExecutionListenerImpl implements IExecutionListener {
 
     @Override
     public void onExecutionStart() {
-        System.out.println("TestNG has started, took around");
-        System.setProperty("current.date.time", JavaUtil.getTimeStamp());
 
         String outputDirectory;
         outputDirectory = System.getProperty("user.dir") + File.separator + "reports" + File.separator
                 + "test-reports-" + JavaUtil.getCurrentTimeStamp();
+
         JavaUtil.createDirectory(outputDirectory);
+
         System.setProperty("logsDirectory", outputDirectory);
 
         ExtentManager.getInstance();
