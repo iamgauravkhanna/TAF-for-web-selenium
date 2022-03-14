@@ -3,6 +3,7 @@
 <suite name="Regression Suite - Project 01">
     
     <listeners>
+        <listener class-name="listeners.ITestListenerImpl"></listener>
         <listener class-name="listeners.IExecutionListenerImpl"></listener>
     </listeners>
 

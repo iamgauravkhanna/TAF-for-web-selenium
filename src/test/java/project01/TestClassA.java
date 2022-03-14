@@ -9,12 +9,11 @@ import reporting.ExtentTestManager;
 
 public class TestClassA extends BaseTest {
 
-    @Test
+    @Test(description = "Test Cases #001")
     public void firstTestMethod(){
         HomePO homePO;
         homePO = PageFactoryManager.getHomePO(DriverFactory.getDriver());
         homePO.open();
         homePO.goToSectionOne();
-        ExtentTestManager.getTest().pass("TC executed successfully");
     }
 }

@@ -22,10 +22,9 @@ public class ExtentTestManager {
 
     public static synchronized ExtentTest startTest(String testName, String description) {
 
+        System.out.println(testName+" : "+description);
         ExtentTest extentTest = extent.createTest(testName, description);
-
         extentTestMap.put((int) (long) (Thread.currentThread().getId()), extentTest);
-
         return extentTest;
     }
 }

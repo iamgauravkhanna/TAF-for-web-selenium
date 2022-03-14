@@ -1,6 +1,8 @@
 cd reports
 
-rm -rf *.html
+rm -rf test-reports*
+
+ls -ltr
 
 cd ..
 

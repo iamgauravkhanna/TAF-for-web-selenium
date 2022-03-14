@@ -12,9 +12,7 @@ public class ExtentManager {
 
     private static String fileSeperator = System.getProperty("file.separator");
 
-    private static String reportFilepath = System.getProperty("user.dir") + fileSeperator + "reports";
-
-    private static String reportFileLocation = reportFilepath + fileSeperator + reportFileName;
+    private static String reportFileLocation = System.getProperty("logsDirectory") + fileSeperator + reportFileName;
 
     public static ExtentReports getInstance() {
 

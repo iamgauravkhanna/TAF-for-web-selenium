@@ -14,7 +14,6 @@ public class BaseTest {
 
         System.out.println("BEFORE TEST CASE : " + getClass().getSimpleName() + " WITH THREAD ID : " + Thread.currentThread().getId());
         DriverFactory.setDriver("firefox");
-        ExtentTestManager.startTest(Method.class.getName(),"description will be here");
     }
 
     @AfterMethod
