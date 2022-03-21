@@ -5,7 +5,7 @@ import property.PropertyUtil;
 import java.io.File;
 import java.util.Properties;
 
-import static constants.FrameworkConstants.DIRECTORY_ENV_CONFIG;
+import static constants.TestConstants.DIRECTORY_ENV_CONFIG;
 
 /**
  * Singleton Design Pattern is implemented here

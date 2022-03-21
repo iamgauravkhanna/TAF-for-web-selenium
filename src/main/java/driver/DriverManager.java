@@ -1,8 +1,9 @@
-package factory;
+package driver;
 
+import factory.BrowserFactory;
 import org.openqa.selenium.WebDriver;
 
-public class DriverFactory {
+public class DriverManager {
 
     protected static ThreadLocal<WebDriver> threadLocal =  new ThreadLocal<WebDriver>();
 

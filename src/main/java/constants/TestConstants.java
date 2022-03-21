@@ -2,7 +2,7 @@ package constants;
 
 import java.io.File;
 
-public class FrameworkConstants {
+public class TestConstants {
 
     public static final int EXPLICIT_WAIT = 10;
     public static final int TIMEOUT = 60;

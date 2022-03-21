@@ -1,11 +1,11 @@
 package pages;
 
-import logger.CustomLog;
+import logger.MyLogger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static constants.FrameworkConstants.*;
+import static constants.TestConstants.*;
 
 import java.time.Duration;
 import java.util.List;
@@ -26,7 +26,7 @@ public class BasePage {
             webDriver.get(link);
             webDriver.manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
         } catch (TimeoutException e) {
-            CustomLog.ERROR("Page did not loaded within " + TIMEOUT + " seconds!");
+            MyLogger.ERROR("Page did not loaded within " + TIMEOUT + " seconds!");
         }
     }
 
@@ -73,6 +73,10 @@ public class BasePage {
 
     public String getElementElementCustomAttribute(WebElement element, String customAttribute) {
         return waitForElementVisibility(element).getAttribute(customAttribute);
+    }
+
+    public String getPageTitle() {
+        return webDriver.getTitle();
     }
 
 }

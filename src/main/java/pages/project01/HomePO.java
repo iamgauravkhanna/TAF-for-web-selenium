@@ -1,6 +1,6 @@
 package pages.project01;
 
-import logger.CustomLog;
+import logger.MyLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,7 +21,7 @@ public class HomePO extends BasePage {
     }
 
     public void open(){
-        CustomLog.infoExtentStep("Opening home page");
+        MyLogger.infoExtentStep("Opening home page");
         openBrowser(HOME_URL);
     }
 

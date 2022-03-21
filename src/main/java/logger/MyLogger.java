@@ -1,13 +1,11 @@
 package logger;
 
-import constants.FrameworkConstants;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import reporting.ExtentTestManager;
 
-public class CustomLog {
+public class MyLogger {
 
-    private static Logger Log = Logger.getLogger("CustomLog");
+    private static Logger Log = Logger.getLogger("MyLogger");
 
     public static void infoExtentStep(String message) {
         INFO(message);

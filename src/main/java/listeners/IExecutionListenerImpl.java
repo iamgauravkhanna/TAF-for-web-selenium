@@ -1,7 +1,7 @@
 package listeners;
 
-import constants.FrameworkConstants;
-import logger.CustomLog;
+import constants.TestConstants;
+import logger.MyLogger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.IExecutionListener;
 import reporting.ExtentManager;
@@ -24,13 +24,13 @@ public class IExecutionListenerImpl implements IExecutionListener {
 
         ExtentManager.getInstance();
 
-        PropertyConfigurator.configure(FrameworkConstants.log4jPath);
-        CustomLog.INFO("Executed Started");
+        PropertyConfigurator.configure(TestConstants.log4jPath);
+        MyLogger.INFO("Executed Started");
     }
 
     @Override
     public void onExecutionFinish() {
-        CustomLog.INFO("TestNG has finished, took around");
+        MyLogger.INFO("TestNG has finished, took around");
         ExtentManager.getInstance().flush();
     }
 }

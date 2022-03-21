@@ -1,24 +1,21 @@
 package base;
 
-import factory.DriverFactory;
-import logger.CustomLog;
+import driver.DriverManager;
+import logger.MyLogger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import reporting.ExtentTestManager;
-
-import java.lang.reflect.Method;
 
 public class BaseTest {
 
     @BeforeMethod
     public void beforeMethod() {
-        CustomLog.INFO("BEFORE TEST CASE : " + getClass().getSimpleName() + " WITH THREAD ID : " + Thread.currentThread().getId());
-        DriverFactory.setDriver("firefox");
+        MyLogger.INFO("BEFORE TEST CASE : " + getClass().getSimpleName() + " WITH THREAD ID : " + Thread.currentThread().getId());
+        DriverManager.setDriver("firefox");
     }
 
     @AfterMethod
     public void afterMethod(){
-        CustomLog.INFO("AFTER TEST CASE : " + getClass().getSimpleName() + " WITH THREAD ID : " + Thread.currentThread().getId());
-        DriverFactory.removeDriver();
+        MyLogger.INFO("AFTER TEST CASE : " + getClass().getSimpleName() + " WITH THREAD ID : " + Thread.currentThread().getId());
+        DriverManager.removeDriver();
     }
 }
