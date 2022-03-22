@@ -3,6 +3,7 @@ package pages;
 import logger.MyLogger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static constants.TestConstants.*;
@@ -15,6 +16,7 @@ public class BasePage {
 
     protected WebDriver webDriver;
     protected WebDriverWait webDriverWait;
+    protected FluentWait fluentWait ;
 
     public BasePage(WebDriver driver) {
         webDriver = driver;

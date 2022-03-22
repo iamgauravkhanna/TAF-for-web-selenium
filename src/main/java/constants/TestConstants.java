@@ -5,6 +5,8 @@ import java.io.File;
 public class TestConstants {
 
     public static final int EXPLICIT_WAIT = 10;
+    public static final int FLUENT_WAIT = 30;
+    public static final int FLUENT_POLLING = 5;
     public static final int TIMEOUT = 60;
 
     /* SUPPORTED BROWSERS */
