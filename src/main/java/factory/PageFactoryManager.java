@@ -1,13 +1,12 @@
 package factory;
 
-import org.openqa.selenium.WebDriver;
 import pages.project01.HomePO;
 
 public class PageFactoryManager {
 
     private static HomePO homePO;
 
-    public static HomePO getHomePO(WebDriver webDriver){
+    public static HomePO getHomePO(){
         /**
          * Using Ternary Operator: Checking for HomePO as null.
          *
@@ -15,6 +14,6 @@ public class PageFactoryManager {
          *
          * If it is not null, then, return homePO
          */
-        return homePO == null ? new HomePO(webDriver) : homePO;
+        return homePO == null ? new HomePO() : homePO;
     }
 }

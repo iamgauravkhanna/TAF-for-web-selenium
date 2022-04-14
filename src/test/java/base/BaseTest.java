@@ -10,7 +10,7 @@ public class BaseTest {
     @BeforeMethod
     public void beforeMethod() {
         MyLogger.INFO("BEFORE TEST CASE : " + getClass().getSimpleName() + " WITH THREAD ID : " + Thread.currentThread().getId());
-        DriverManager.setDriver("firefox");
+        DriverManager.setDriver(System.getProperty("browser"));
     }
 
     @AfterMethod

@@ -1,7 +1,9 @@
 package pages;
 
+import driver.DriverManager;
 import logger.MyLogger;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,8 +20,9 @@ public class BasePage {
     protected WebDriverWait webDriverWait;
     protected FluentWait fluentWait ;
 
-    public BasePage(WebDriver driver) {
-        webDriver = driver;
+    public BasePage() {
+        webDriver = DriverManager.getDriver();
+        PageFactory.initElements(webDriver,this);
         webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(EXPLICIT_WAIT));
     }
 
@@ -57,6 +60,14 @@ public class BasePage {
 
     public String getElementText(WebElement element) {
         return waitForElementVisibility(element).getText();
+    }
+
+    public void assertElementIsPresent(WebElement element){
+        if (element.isDisplayed()) {
+            MyLogger.infoExtentStep("Element is Visible");
+        } else {
+            throw new ElementNotVisibleException("Element not visible");
+        }
     }
 
     public void clearAndSendKeys(WebElement element, String value) {

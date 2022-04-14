@@ -11,21 +11,19 @@ public class TestClassA extends BaseTest {
 
     @Test(description = "Test Cases #001")
     public void TestMethodA(){
-        HomePO homePO;
-        homePO = PageFactoryManager.getHomePO(DriverManager.getDriver());
+        HomePO homePO = PageFactoryManager.getHomePO();
         homePO.open();
         homePO.goToSectionOne();
     }
 
-    @Test(description = "Test Cases #002")
+    @Test(description = "Test Cases #002", enabled = false)
     public void TestMethodB(){
         Assert.assertEquals(7,9);
     }
 
-    @Test(description = "Test Cases #003", dependsOnMethods = "TestMethodB")
+    @Test(description = "Test Cases #003", dependsOnMethods = "TestMethodB",enabled = false)
     public void TestMethodC(){
         Assert.assertEquals(7,7);
     }
-
 
 }

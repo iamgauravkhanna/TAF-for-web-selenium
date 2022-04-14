@@ -1,6 +1,9 @@
+- Enable Screnshots
+- Add Methods to Base Page
 - Driver Factory vs Browser Factory
 - Custom Annotations (AnnotationTransformer)
 - Serialize and De-Serialize JSON Utility
 - Integration with Cloud Platforms
 - Docker Container Video Recording
 - Custom Reporting Dashboard
+- Implementing Proxy

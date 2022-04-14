@@ -1,6 +1,7 @@
 package factory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import logger.MyLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -19,11 +20,13 @@ public class BrowserFactory {
         if (System.getProperty("executionEnvironment").equalsIgnoreCase("local")) {
             switch (browser) {
                 case BROWSER_CHROME: {
+                    MyLogger.INFO("Creating Chrome Browser Instance");
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     break;
                 }
                 case BROWSER_FIREFOX: {
+                    MyLogger.INFO("Creating Firefox Browser Instance");
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
@@ -47,7 +50,7 @@ public class BrowserFactory {
             }
         }
         driver.manage().window().maximize();
-        System.out.println("Returning new Driver with ID : " + driver.hashCode());
+        MyLogger.INFO("Returning new Driver with ID : " + driver.hashCode());
         return driver;
     }
 }

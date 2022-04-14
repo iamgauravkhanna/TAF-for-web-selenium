@@ -19,3 +19,9 @@ TAF (Test Automation Framework) for Web using Selenium
 - Interaction with Barcode and QR Code
 - Multiple reports support - TestNG, ReportNG, Allure & Extent Reports
 - Usage of TestNG and WebDriver Event Listeners
+
+### To Run Tests from CLI
+
+```bash
+sh web-test-runner.sh
+```

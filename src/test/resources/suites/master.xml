@@ -10,7 +10,10 @@
     <test name="Project 01 - Test 01" parallel="methods"
           thread-count="10">
         <classes>
-            <class name="project01.TestClassA" />
+<!--            <class name="project01.TestClassA" />-->
+<!--            <class name="project02.TestClassA"></class>-->
+<!--            <class name="project03.TestClassA"></class>-->
+            <class name="project04.TestClassA"></class>
         </classes>
     </test>
 
