@@ -39,13 +39,16 @@ public class CSVUtils {
 		for (CSVRecord csvRecordObj : csvParserObj) {
 
 			System.out.println(
-					"Row No => " + csvRecordObj.getRecordNumber() + " & Value of Coloumn => " + csvRecordObj.get(0));
+					"Row No => " + csvRecordObj.getRecordNumber() + " & Value of Col => " + csvRecordObj.get(0));
 			
 			System.out.println(
-					"Row No => " + csvRecordObj.getRecordNumber() + " & Value of Coloumn => " + csvRecordObj.get(1));
+					"Row No => " + csvRecordObj.getRecordNumber() + " & Value of Col => " + csvRecordObj.get(1));
 			
 			System.out.println(
-					"Row No => " + csvRecordObj.getRecordNumber() + " & Value of Coloumn => " + csvRecordObj.get(2));
+					"Row No => " + csvRecordObj.getRecordNumber() + " & Value of Col => " + csvRecordObj.get(2));
+
+			System.out.println(
+					"Row No => " + csvRecordObj.getRecordNumber() + " & Value of Col => " + csvRecordObj.get(3));
 		}
 	}
 }
