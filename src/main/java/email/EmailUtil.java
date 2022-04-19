@@ -1,6 +1,6 @@
 package email;
 
-import logger.MyLogger;
+import logger.TestLogger;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -63,7 +63,7 @@ public class EmailUtil {
 
             Transport.send(message);
 
-            MyLogger.INFO("Email sent successfully.");
+            TestLogger.INFO("Email sent successfully.");
 
         } catch (MessagingException mex) {
             mex.printStackTrace();

@@ -1,10 +1,8 @@
 package pages.project01;
 
-import logger.MyLogger;
-import org.openqa.selenium.WebDriver;
+import logger.TestLogger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import pages.BasePage;
 import utils.ConfigLoader;
 
@@ -16,7 +14,7 @@ public class HomePO extends BasePage {
     WebElement womenSection;
 
     public void open(){
-        MyLogger.infoExtentStep("Opening home page");
+        TestLogger.INFO_STEP("Opening home page");
         openBrowser(HOME_URL);
     }
 

@@ -1,7 +1,7 @@
 package pages;
 
 import driver.DriverManager;
-import logger.MyLogger;
+import logger.TestLogger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -31,7 +31,7 @@ public class BasePage {
             webDriver.get(link);
             webDriver.manage().timeouts().pageLoadTimeout(TIMEOUT, TimeUnit.SECONDS);
         } catch (TimeoutException e) {
-            MyLogger.ERROR("Page did not loaded within " + TIMEOUT + " seconds!");
+            TestLogger.ERROR("Page did not loaded within " + TIMEOUT + " seconds!");
         }
     }
 
@@ -64,7 +64,7 @@ public class BasePage {
 
     public void assertElementIsPresent(WebElement element){
         if (element.isDisplayed()) {
-            MyLogger.infoExtentStep("Element is Visible");
+            TestLogger.INFO_STEP("Element is Visible");
         } else {
             throw new ElementNotVisibleException("Element not visible");
         }

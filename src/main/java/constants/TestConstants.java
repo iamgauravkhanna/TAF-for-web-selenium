@@ -9,7 +9,6 @@ public class TestConstants {
     public static final int FLUENT_POLLING = 5;
     public static final int TIMEOUT = 60;
 
-    /* SUPPORTED BROWSERS */
     public static final String BROWSER_CHROME = "chrome";
     public static final String BROWSER_FIREFOX = "firefox";
     public static final String BROWSER_SAFARI = "safari";
@@ -20,5 +19,5 @@ public class TestConstants {
 
     public static final String ATTRIBUTE_VALUE = "value";
 
-    public static final String log4jPath = System.getProperty("user.dir") + File.separator + "log4j.properties";
+    public static final String LOG4J_PATH = System.getProperty("user.dir") + File.separator + "log4j.properties";
 }
