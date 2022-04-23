@@ -3,7 +3,7 @@ package pages.project02;
 import logger.TestLogger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.BasePage;
+import pages.base.BasePage;
 import utils.ConfigLoader;
 
 public class HomePO extends BasePage {

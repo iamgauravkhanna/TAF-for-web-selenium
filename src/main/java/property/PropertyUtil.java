@@ -1,5 +1,7 @@
 package property;
 
+import logger.TestLogger;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -8,12 +10,12 @@ import java.util.Properties;
 
 public class PropertyUtil {
 
-    public static Properties propertyLoader(String filePath) {
-        Properties properties = new Properties();
+    public static Properties propertyLoader(Properties properties, String filePath) {
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader(filePath));
             try {
+                //TestLogger.INFO("Loading Property : "+filePath);
                 properties.load(reader);
                 reader.close();
             } catch (IOException e) {

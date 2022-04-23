@@ -1,9 +1,10 @@
 package pages.project01;
 
 import logger.TestLogger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.BasePage;
+import pages.base.BasePage;
 import utils.ConfigLoader;
 
 public class HomePO extends BasePage {
@@ -19,6 +20,7 @@ public class HomePO extends BasePage {
     }
 
     public void goToSectionOne() {
-        womenSection.click();
+        //womenSection.click();
+        findElement(By.xpath("//a[text()='Women']")).click();
     }
 }

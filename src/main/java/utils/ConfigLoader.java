@@ -1,5 +1,6 @@
 package utils;
 
+import logger.TestLogger;
 import property.PropertyUtil;
 
 import java.io.File;
@@ -12,7 +13,7 @@ import static constants.TestConstants.DIRECTORY_ENV_CONFIG;
  */
 public class ConfigLoader {
 
-    private Properties properties;
+    private Properties properties = new Properties();
 
     private static ConfigLoader configLoader;
 
@@ -27,7 +28,8 @@ public class ConfigLoader {
         File[] filesList = directoryPath.listFiles();
 
         for(File file : filesList) {
-            properties = PropertyUtil.propertyLoader(resourcePath + file.getName());
+            PropertyUtil.propertyLoader(properties,resourcePath + file.getName());
+            //TestLogger.INFO(properties.toString());
         }
     }
 

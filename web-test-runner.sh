@@ -1,7 +1,7 @@
 mvn clean install test \
 -DgroupToRun=tc004 \
 -Dbrowser=chrome \
--DtestEnvironment=project04 \
--DSuiteFilePath=src/test/resources/suites/master.xml \
+-DtestEnvironment=project01 \
+-DSuiteFilePath=src/test/resources/suites/project01.xml \
 -DexecutionEnvironment=local \
 -DskipEmail=true

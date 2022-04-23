@@ -1,7 +1,7 @@
 package pages.project04;
 
 import logger.TestLogger;
-import pages.BasePage;
+import pages.base.BasePage;
 import utils.ConfigLoader;
 
 public class HomePO extends BasePage {
