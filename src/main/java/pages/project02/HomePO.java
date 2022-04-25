@@ -8,7 +8,7 @@ import utils.ConfigLoader;
 
 public class HomePO extends BasePage {
 
-    public static final String HOME_URL = ConfigLoader.getInstance().getPropertyValue("base.url");
+    public static final String HOME_URL = ConfigLoader.getInstance().get("base.url");
 
     @FindBy(xpath = "//*[contains(text(),'Front-End')]")
     WebElement homeFrontEndText;

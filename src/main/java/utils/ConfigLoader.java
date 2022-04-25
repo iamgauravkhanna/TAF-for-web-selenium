@@ -41,7 +41,7 @@ public class ConfigLoader {
     }
 
 
-    public String getPropertyValue(String propertyKey) {
+    public String get(String propertyKey) {
         String prop = properties.getProperty(propertyKey);
         if (prop != null) {
             return prop.trim();

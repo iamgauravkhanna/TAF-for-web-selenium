@@ -10,6 +10,7 @@ public class TestClassA extends BaseTest {
     public void TestMethodA(){
         HomePO homePO = new HomePO();
         homePO.open();
+        homePO.uploadFile();
     }
 
 }

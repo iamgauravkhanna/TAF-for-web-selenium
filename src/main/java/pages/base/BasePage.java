@@ -50,12 +50,22 @@ public class BasePage {
         return webDriverWait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
+    public WebElement waitForElementToBeClickable(WebElement element) {
+        TestLogger.INFO("Wait For Element To Be Clickable");
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
     public WebElement waitForElementVisibility(WebElement element) {
         return webDriverWait.until(ExpectedConditions.visibilityOf(element));
     }
 
     public void click(By by) {
         waitForElementToBeClickable(by).click();
+    }
+
+    public void click(WebElement element) {
+        waitForElementToBeClickable(element).click();
+        TestLogger.INFO("Click on Element : " + element.getText());
     }
 
     public String getElementText(WebElement element) {
@@ -73,9 +83,18 @@ public class BasePage {
     }
 
     public void clearAndSendKeys(WebElement element, String value) {
-        element = waitForElementVisibility(element);
-        element.clear();
-        element.sendKeys(value);
+        clear(element);
+        sendKeys(element, value);
+    }
+
+    public void clear(WebElement element) {
+        TestLogger.INFO("Clear Text");
+        waitForElementVisibility(element).clear();
+    }
+
+    public void sendKeys(WebElement element, String value) {
+        TestLogger.INFO("Send Keys");
+        waitForElementVisibility(element).sendKeys(value);
     }
 
     public void scrollToElement(WebElement element) {
@@ -140,6 +159,39 @@ public class BasePage {
     public Dimension getSize(WebElement element) {
         TestLogger.INFO("Returning Size of Element");
         return waitForElementVisibility(element).getSize();
+    }
+
+    public boolean isSelected(WebElement element) {
+        TestLogger.INFO("Checking if element is selected");
+        return waitForElementVisibility(element).isSelected();
+    }
+
+    public boolean isDisplayed(WebElement element) {
+        TestLogger.INFO("Checking if element is displayed");
+        return waitForElementVisibility(element).isDisplayed();
+    }
+
+    public boolean isEnabled(WebElement element) {
+        TestLogger.INFO("Checking if element is enabled");
+        return waitForElementVisibility(element).isEnabled();
+    }
+
+    public void uploadFile(WebElement element, String filePath) {
+        sendKeys(element, filePath);
+    }
+
+    public void goToPage(String url) {
+        TestLogger.INFO("Go to " + url);
+        DriverManager.getDriver().navigate().to(url);
+    }
+
+    public void pause(){
+        try{
+            TestLogger.INFO("Pausing for 10 Secs");
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

@@ -15,9 +15,12 @@ public class TestConstants {
     public static final String BROWSER_EDGE = "edge";
     public static final String BROWSER_OPERA = "opera";
 
+    public static final String USER_DIR = System.getProperty("user.dir");
     public static final String DIRECTORY_ENV_CONFIG = "/src/main/resources/";
 
     public static final String ATTRIBUTE_VALUE = "value";
 
-    public static final String LOG4J_PATH = System.getProperty("user.dir") + File.separator + "log4j.properties";
+    public static final String LOG4J_PATH = USER_DIR + File.separator + "log4j.properties";
+
+    public static final String BASE_PATH = "base.url";
 }
