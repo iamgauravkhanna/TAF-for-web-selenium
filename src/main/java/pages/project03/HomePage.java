@@ -4,7 +4,7 @@ import logger.TestLogger;
 import pages.base.BasePage;
 import utils.ConfigLoader;
 
-public class HomePO extends BasePage {
+public class HomePage extends BasePage {
 
     public static final String HOME_URL = ConfigLoader.getInstance().get("base.url");
 

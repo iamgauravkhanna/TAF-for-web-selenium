@@ -9,7 +9,7 @@ import pages.base.BasePage;
 import utils.ConfigLoader;
 import utils.JavaUtil;
 
-public class HomePO extends BasePage {
+public class HomePage extends BasePage {
 
     @FindBy(id = "file-upload")
     private WebElement fileUpload;

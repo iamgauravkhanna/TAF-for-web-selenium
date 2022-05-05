@@ -1,12 +1,12 @@
 package factory;
 
-import pages.project01.HomePO;
+import pages.project01.HomePage;
 
 public class PageFactoryManager {
 
-    private static HomePO homePO;
+    private static HomePage homePage;
 
-    public static HomePO getHomePO(){
+    public static HomePage getHomePage(){
         /**
          * Using Ternary Operator: Checking for HomePO as null.
          *
@@ -14,6 +14,6 @@ public class PageFactoryManager {
          *
          * If it is not null, then, return homePO
          */
-        return homePO == null ? new HomePO() : homePO;
+        return homePage == null ? new HomePage() : homePage;
     }
 }

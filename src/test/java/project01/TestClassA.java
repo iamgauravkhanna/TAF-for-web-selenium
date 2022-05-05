@@ -1,19 +1,18 @@
 package project01;
 
 import base.BaseTest;
-import driver.DriverManager;
 import factory.PageFactoryManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.project01.HomePO;
+import pages.project01.HomePage;
 
 public class TestClassA extends BaseTest {
 
     @Test(description = "Test Cases #001")
     public void TestMethodA(){
-        HomePO homePO = PageFactoryManager.getHomePO();
-        homePO.open();
-        homePO.goToSectionOne();
+        HomePage homePage = PageFactoryManager.getHomePage();
+        homePage.open();
+        homePage.goToSectionOne();
     }
 
     @Test(description = "Test Cases #002", enabled = false)
