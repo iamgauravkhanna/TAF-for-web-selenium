@@ -1,5 +1,6 @@
 package pages.project01;
 
+import constants.TestConstants;
 import logger.TestLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,7 @@ import utils.ConfigLoader;
 
 public class HomePage extends BasePage {
 
-    public static final String HOME_URL = ConfigLoader.getInstance().get("base.url");
+    public static final String HOME_URL = ConfigLoader.getInstance().get(TestConstants.BASE_URL);
 
     @FindBy(xpath = "//a[text()='Women']")
     WebElement womenSection;

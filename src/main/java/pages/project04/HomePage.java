@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.base.BasePage;
 import utils.ConfigLoader;
-import utils.JavaUtil;
 
 public class HomePage extends BasePage {
 
@@ -19,11 +18,11 @@ public class HomePage extends BasePage {
 
     public void open() {
         TestLogger.INFO_STEP("Opening home page");
-        openBrowser(ConfigLoader.getInstance().get(TestConstants.BASE_PATH));
+        openBrowser(ConfigLoader.getInstance().get(TestConstants.BASE_URL));
     }
 
     public void uploadFile() {
-        goToPage(ConfigLoader.getInstance().get(TestConstants.BASE_PATH) + "/upload");
+        goToPage(ConfigLoader.getInstance().get(TestConstants.BASE_URL) + "/upload");
         uploadFile(fileUpload, TestConstants.LOG4J_PATH);
         click(uploadButton);
         pause();

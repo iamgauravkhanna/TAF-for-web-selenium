@@ -22,5 +22,5 @@ public class TestConstants {
 
     public static final String LOG4J_PATH = USER_DIR + File.separator + "log4j.properties";
 
-    public static final String BASE_PATH = "base.url";
+    public static final String BASE_URL = "base.url";
 }
