@@ -29,7 +29,7 @@ public class HomePage extends BasePage {
         pause();
         sendKeys(password, "secret_sauce");
         pause();
-        click(loginBtn);
+        loginBtn.click();
         pause();
         waitForElementVisibility(findElement(By.xpath("//*[text()='Products']")));
     }
