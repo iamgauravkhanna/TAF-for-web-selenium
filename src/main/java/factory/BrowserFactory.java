@@ -31,16 +31,14 @@ public class BrowserFactory {
                     driver = new FirefoxDriver();
                     break;
                 }
-                case BROWSER_SAFARI: {
-                    driver = new SafariDriver();
-                    break;
-                }
                 case BROWSER_EDGE: {
+                    TestLogger.INFO("Creating Edge Browser Instance");
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                     break;
                 }
                 case BROWSER_OPERA: {
+                    TestLogger.INFO("Creating Opera Browser Instance");
                     WebDriverManager.operadriver().setup();
                     driver = new OperaDriver();
                     break;

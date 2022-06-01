@@ -11,7 +11,6 @@ public class TestConstants {
 
     public static final String BROWSER_CHROME = "chrome";
     public static final String BROWSER_FIREFOX = "firefox";
-    public static final String BROWSER_SAFARI = "safari";
     public static final String BROWSER_EDGE = "edge";
     public static final String BROWSER_OPERA = "opera";
 
