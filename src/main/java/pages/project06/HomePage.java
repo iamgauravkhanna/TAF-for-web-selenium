@@ -1,4 +1,4 @@
-package pages.base.project06;
+package pages.project06;
 
 import constants.TestConstants;
 import logger.TestLogger;

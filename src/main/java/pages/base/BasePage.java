@@ -1,16 +1,23 @@
 package pages.base;
 
+import constants.TestConstants;
 import driver.DriverManager;
 import logger.TestLogger;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.ScreenShotUtil;
 
 import static constants.TestConstants.*;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -61,11 +68,13 @@ public class BasePage {
 
     public void click(By by) {
         waitForElementToBeClickable(by).click();
+        ScreenShotUtil.takeScreenShot();
     }
 
     public void click(WebElement element) {
         waitForElementToBeClickable(element).click();
         TestLogger.INFO("Click on Element : " + element.getText());
+        ScreenShotUtil.takeScreenShot();
     }
 
     public String getElementText(WebElement element) {
@@ -84,17 +93,20 @@ public class BasePage {
 
     public void clearAndSendKeys(WebElement element, String value) {
         clear(element);
+        ScreenShotUtil.takeScreenShot();
         sendKeys(element, value);
     }
 
     public void clear(WebElement element) {
         TestLogger.INFO("Clear Text");
         waitForElementVisibility(element).clear();
+        ScreenShotUtil.takeScreenShot();
     }
 
     public void sendKeys(WebElement element, String value) {
         TestLogger.INFO("Send Keys");
         waitForElementVisibility(element).sendKeys(value);
+        ScreenShotUtil.takeScreenShot();
     }
 
     public void scrollToElement(WebElement element) {
@@ -185,8 +197,8 @@ public class BasePage {
         DriverManager.getDriver().navigate().to(url);
     }
 
-    public void pause(){
-        try{
+    public void pause() {
+        try {
             TestLogger.INFO("Pausing for 10 Secs");
             Thread.sleep(10000);
         } catch (InterruptedException e) {

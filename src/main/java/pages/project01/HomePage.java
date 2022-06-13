@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.base.BasePage;
 import utils.ConfigLoader;
+import utils.ScreenShotUtil;
 
 public class HomePage extends BasePage {
 
@@ -18,10 +19,12 @@ public class HomePage extends BasePage {
     public void open(){
         TestLogger.INFO_STEP("Opening home page");
         openBrowser(HOME_URL);
+        pause();
     }
 
     public void goToSectionOne() {
         //womenSection.click();
         findElement(By.xpath("//a[text()='Women']")).click();
+        ScreenShotUtil.takeScreenShot();
     }
 }

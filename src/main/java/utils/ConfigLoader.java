@@ -9,7 +9,7 @@ import java.util.Properties;
 import static constants.TestConstants.DIRECTORY_ENV_CONFIG;
 
 /**
- * Singleton Design Pattern is implemented here
+ * Using Singleton Design Pattern
  */
 public class ConfigLoader {
 
@@ -44,9 +44,10 @@ public class ConfigLoader {
     public String get(String propertyKey) {
         String prop = properties.getProperty(propertyKey);
         if (prop != null) {
+            //System.out.println("Getting Key : " + prop.trim());
             return prop.trim();
         } else {
-            throw new RuntimeException("Property " + propertyKey + " is not specified in the config.properties file");
+            throw new RuntimeException("Property " + propertyKey + " is not specified in the config properties file");
         }
     }
 

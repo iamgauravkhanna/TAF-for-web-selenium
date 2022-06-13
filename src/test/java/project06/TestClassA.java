@@ -2,7 +2,7 @@ package project06;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
-import pages.base.project06.HomePage;
+import pages.project06.HomePage;
 
 public class TestClassA extends BaseTest {
 

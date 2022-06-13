@@ -9,22 +9,26 @@ import utils.JavaUtil;
 
 import java.io.File;
 
+import static constants.TestConstants.SCREENSHOTS_PATH;
+
 public class IExecutionListenerImpl implements IExecutionListener {
 
     @Override
     public void onExecutionStart() {
 
-        String outputDirectory;
-        outputDirectory = System.getProperty("user.dir") + File.separator + "reports" + File.separator
+        String outputDirectory = System.getProperty("user.dir") + File.separator + "reports" + File.separator
                 + "test-reports-" + JavaUtil.getCurrentTimeStamp();
 
         JavaUtil.createDirectory(outputDirectory);
 
         System.setProperty("logsDirectory", outputDirectory);
 
+        JavaUtil.createDirectory(SCREENSHOTS_PATH);
+
         ExtentManager.getInstance();
 
         PropertyConfigurator.configure(TestConstants.LOG4J_PATH);
+
         TestLogger.INFO("Executed Started");
     }
 

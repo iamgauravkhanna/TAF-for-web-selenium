@@ -1,4 +1,3 @@
-- Enable Screenshots
 - Add Methods to Base Page
 - Driver Factory vs Browser Factory
 - Custom Annotations (AnnotationTransformer)

@@ -21,10 +21,9 @@ public class JavaUtil {
     public static void createDirectory(String directoryName) {
 
         File dir = new File(directoryName);
-        boolean successful = false;
         try {
+            //System.out.println("creating dir : " + directoryName);
             dir.mkdir();
-            successful = true;
         } catch (Exception e) {
             e.printStackTrace();
         }

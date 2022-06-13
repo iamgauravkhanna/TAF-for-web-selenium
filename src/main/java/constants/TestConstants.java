@@ -4,6 +4,8 @@ import java.io.File;
 
 public class TestConstants {
 
+    public static final String FILE_SEPARATOR = System.getProperty("file.separator") ;
+
     public static final int EXPLICIT_WAIT = 10;
     public static final int FLUENT_WAIT = 30;
     public static final int FLUENT_POLLING = 5;
@@ -20,6 +22,8 @@ public class TestConstants {
     public static final String ATTRIBUTE_VALUE = "value";
 
     public static final String LOG4J_PATH = USER_DIR + File.separator + "log4j.properties";
+
+    public static final String SCREENSHOTS_PATH = System.getProperty("logsDirectory") + File.separator + "screenshots";
 
     public static final String BASE_URL = "base.url";
 }
