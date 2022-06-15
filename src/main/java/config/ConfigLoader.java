@@ -1,6 +1,5 @@
-package utils;
+package config;
 
-import logger.TestLogger;
 import property.PropertyUtil;
 
 import java.io.File;

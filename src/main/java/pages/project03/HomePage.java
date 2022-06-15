@@ -2,7 +2,7 @@ package pages.project03;
 
 import logger.TestLogger;
 import pages.base.BasePage;
-import utils.ConfigLoader;
+import config.ConfigLoader;
 
 public class HomePage extends BasePage {
 

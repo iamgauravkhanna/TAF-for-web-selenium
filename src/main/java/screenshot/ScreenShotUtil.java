@@ -1,4 +1,4 @@
-package utils;
+package screenshot;
 
 import driver.DriverManager;
 import org.apache.commons.io.FileUtils;

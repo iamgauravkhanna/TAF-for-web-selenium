@@ -1,23 +1,17 @@
 package pages.base;
 
-import constants.TestConstants;
 import driver.DriverManager;
 import logger.TestLogger;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.ScreenShotUtil;
+import screenshot.ScreenShotUtil;
 
 import static constants.TestConstants.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 

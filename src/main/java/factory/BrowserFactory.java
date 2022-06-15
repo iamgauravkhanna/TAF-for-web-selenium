@@ -48,7 +48,7 @@ public class BrowserFactory {
             }
         }
         driver.manage().window().maximize();
-        TestLogger.INFO("Returning new Driver with ID : " + driver.hashCode());
+        TestLogger.INFO("Returning new Driver - ID : " + driver.hashCode());
         return driver;
     }
 }

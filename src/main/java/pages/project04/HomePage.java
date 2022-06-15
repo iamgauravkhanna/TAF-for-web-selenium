@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.base.BasePage;
-import utils.ConfigLoader;
+import config.ConfigLoader;
 
 public class HomePage extends BasePage {
 

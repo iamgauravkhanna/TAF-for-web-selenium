@@ -2,7 +2,7 @@ package logger;
 
 import org.apache.log4j.Logger;
 import reporting.ExtentTestManager;
-import utils.ConfigLoader;
+import config.ConfigLoader;
 
 public class TestLogger {
 
