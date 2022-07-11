@@ -1,28 +1,20 @@
-Problem - Why to instantiation over static in PO
-Solution - https://stackoverflow.com/questions/26870858/why-should-i-be-making-my-page-objects-instantiated-rather-than-static
+Q - Why to instantiation over static in PO
+A - https://stackoverflow.com/questions/26870858/why-should-i-be-making-my-page-objects-instantiated-rather-than-static
 
-https://www.leaseweb.com/labs/2014/03/testing-framework-using-maven-testng-webdriver/
+Q - Building Agile Friendly TAF
+A - https://techbeacon.com/how-build-agile-friendly-test-automation-framework
 
-https://wiki.saucelabs.com/display/DOCS/Parallel+Testing+in+Java+with+Maven+and+TestNG
-  
-https://techbeacon.com/how-build-agile-friendly-test-automation-framework
+Q - While Upgrading Selenium to 3.12, apache library was explicitly added in pom.xml.
+A - https://github.com/seleniumhq/selenium/issues/2362
 
-http://samwize.com/2015/03/11/xcode-commands-to-build-app-and-run-on-simulator/
+Q - In order to create log4j file with different name every time, there is not direct property.
+A - https://www.codeproject.com/Tips/1094802/Configure-Log-j-to-Generate-New-Log-File-for-Every
 
-http://www.vimalselvam.com/2016/05/15/selenium-grid-for-appium-mobile-automation/
+Q - While clicking on link, when page was not fully loaded, exception was appearing - element is not clickable because other element is obscuring it.
+A - IsElementClickable method was created for same.
 
-https://eltestor.wordpress.com/2015/09/13/pass-parameters-from-command-line-to-a-selenium-project-using-maven-command/
-
-http://www.seleniumeasy.com/maven-tutorials/choose-selected-testng-xml-files-to-execute-using-maven
-
-Problem - While Upgrading Selenium to 3.12, apache library was explicitly added in pom.xml.
-Solution - https://github.com/seleniumhq/selenium/issues/2362
-
-Problem - In order to create log4j file with different name every time, there is not direct property. 
-Solution - https://www.codeproject.com/Tips/1094802/Configure-Log-j-to-Generate-New-Log-File-for-Every
-
-Problem - While clicking on link, when page was not fully loaded, exception was appearing - element is not clickable because other element is obscuring it.
-Solution - IsElementClickable method was created for same.
+Q - How to suppress maven warnings
+A - https://stackoverflow.com/questions/37590679/how-to-suppress-maven-compiler-warnings-in-jenkins
 
 http://restapi.demoqa.com/utilities/weather/city/Pune
 
@@ -38,8 +30,13 @@ https://seleniumjava.com/2017/12/23/you-dont-need-static-driver-or-static-method
 
 https://www.testingexcellence.com/cookies-selenium-webdriver-rest-assured/
 
-Problem - How to suppress maven warnings
-Solution - https://stackoverflow.com/questions/37590679/how-to-suppress-maven-compiler-warnings-in-jenkins
+http://samwize.com/2015/03/11/xcode-commands-to-build-app-and-run-on-simulator/
+
+http://www.vimalselvam.com/2016/05/15/selenium-grid-for-appium-mobile-automation/
+
+https://eltestor.wordpress.com/2015/09/13/pass-parameters-from-command-line-to-a-selenium-project-using-maven-command/
+
+http://www.seleniumeasy.com/maven-tutorials/choose-selected-testng-xml-files-to-execute-using-maven
 
 https://www.slideshare.net/rahul_verma/jugaadu-automation-the-real-desi-test-automation-story-by-rahul-verma
 
